@@ -16,11 +16,6 @@ document.onreadystatechange = async() => {
   if (document.readyState === 'complete') {
     document.getElementById('container')
       .append(...(await (await fetch('https://api.snowyandrobby.com/rsvp-list')).json()).map((rsvp, index) => {
-        
-        const emailEveryoneAnchor = document.getElementById('email-everyone');
-        const mailtoText = emailEveryoneAnchor.getAttribute('href');
-        emailEveryoneAnchor.setAttribute('href', `${mailtoText}${rsvp.email}, `);
-
         const card = document.createElement('div');
         card.innerHTML = `<h3>${rsvp.name}</h3><a target='_blank' href='mailto:${rsvp.email}'>${rsvp.email}</a><p>${rsvp.message}</p><hr>`;
         return card;
