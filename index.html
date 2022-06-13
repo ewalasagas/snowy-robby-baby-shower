@@ -179,35 +179,42 @@
       <div class="rsvp-space"></div>
       <div class="rsvp-title">RSVP</div>
       <div class="rsvp-form-container container">
-          <form action="#">
+        <div class="rsvp-thank-you rsvp-label" style="display: none;">
+          <p>Thank you! </br>See you there! </p>
+        </div>
+        <div class="rsvp-enter-name rsvp-label" style="display: none; color: #b04420;">
+          <p>enter your name please</p>
+        </div>
+          <form class="rsvp-form">
           <div class="rsvp-row">
             <div class="rsvp-col-25 col">
-              <label class="rsvp-label" for="fname">name</label>
+              <label class="rsvp-label" for="name">name</label>
             </div>
             <div class="rsvp-col-75 col">
-              <input class="rsvp-input" type="text" id="fname" name="firstname" placeholder="Your name..">
+              <input class="rsvp-input" type="text" id="name" name="name" placeholder="Your name..">
             </div>
           </div>
           <div class="rsvp-row">
             <div class="rsvp-col-25 col">
-              <label class="rsvp-label" for="lname">email</label>
+              <label class="rsvp-label" for="email">email</label>
             </div>
             <div class="rsvp-col-75 col">
-              <input class="rsvp-input" type="text" id="lname" name="email" placeholder="Enter your email..">
+              <input class="rsvp-input" type="text" id="email" name="email" placeholder="Enter your email..">
             </div>
           </div>
           <div class="rsvp-row">
             <div class="rsvp-col-25 col">
-              <label class="rsvp-label" for="subject">message</label>
+              <label class="rsvp-label" for="message">message</label>
             </div>
             <div class="rsvp-col-75 col">
-              <textarea class="rsvp-input" id="subject" name="subject" placeholder="Feel free to write a message.." style="height:200px"></textarea>
+              <textarea class="rsvp-input" id="message" name="message" placeholder="Feel free to write a message.." style="height:200px"></textarea>
             </div>
           </div>
           <br>
           <div class="rsvp-submit-container">
             <div class="rsvp-row">
-              <input class="rsvp-submit" type="submit" value="SUBMIT">
+              <button lass="rsvp-submit">SUBIT</button>
+              <!-- <input class="rsvp-submit" type="submit" value="SUBMIT"> -->
             </div>
           </div>
           </form>
@@ -225,6 +232,42 @@
     <img class="cloud8" src="./assets/cloud1.png" /> -->
 
       
+    <script>
+      document.onreadystatechange = () => {
+        if (document.readyState === 'complete') {
+          const submitButton = document.querySelector(".rsvp-submit");
+          const nameEl = document.querySelector("#name");
+          const emailEl = document.querySelector("#email");
+          const messageEl = document.querySelector("#message");
+          const rsvpForm = document.querySelector(".rsvp-form");
+          const thankYou = document.querySelector(".rsvp-thank-you");
+          const enterNameMessage = document.querySelector(".rsvp-enter-name");
+          submitButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const postData = {
+              rsvp: {
+                name: nameEl.value,
+                email: emailEl.value,
+                message: messageEl.value,
+              }
+            };
+            if (postData.rsvp.name === '') {
+              enterNameMessage.style.display = 'block';
+              return;
+            }
+            rsvpForm.style.display = 'none';
+            thankYou.style.display = 'block';
+            fetch('https://api.snowyandrobby.com/rsvp', {
+              headers: {
+                "Content-Type": "application/json; charset=utf-8"
+              },
+              method: 'POST',
+              body: JSON.stringify(postData),
+            }).then(response => response.json()).then(data => console.log(data));
+          });
+        }
+      }
+    </script>
 
 </body>
 </html>
