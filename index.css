@@ -1,0 +1,836 @@
+body, html {
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'zerocal';
+    src: url('./assets/ZerocalcareDoubleTrouble.ttf');
+}
+
+
+/****** NAVBAR ************/
+
+@media only screen and (max-width:929px) {
+    .menu_background {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: center;
+    font-family: 'Secular One', sans-serif;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    text-align: center;
+    margin: 0 5vw 0 5vw;
+    text-shadow: 3px 3px #000000;
+    font-size: calc(12px + 1vw)
+}
+
+.menu_background {
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* opacity: 6; */
+    z-index: 10;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: rgb(255, 249, 163);
+}
+
+/****** HOME PAGE *********/
+.home {
+    margin: 0;
+    height: 150vh;
+    background-color: #0a0068;
+}
+/* NAVBAR */
+/* .collapse:not(.show) {
+    display: none;
+    justify-content: center;
+}
+
+@media (min-width:929px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 10.5rem;
+        padding-left: 0.5rem;
+    }
+} */
+
+/* .menu-section-fixed {
+    position: fixed;
+
+}
+
+.menu-section {
+    color: white;
+    font-family:sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20vw;
+    padding-right: 20vw;
+} */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* .menu-grid-container {
+    font-family: 'Mulish', sans-serif;
+    font-size: calc(20px + 0.2vw);
+    margin-top: 2vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+    width: 100%;
+    display: grid;
+ 
+    position: fixed;
+    top: 0;
+    padding: 0 20vw;
+    z-index: 10;
+    letter-spacing: 3px;
+}
+  
+.menu-grid-item {
+
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+} */
+
+
+.twinkle-title {
+    position: absolute;
+    left: 40%;
+    top: 13%;
+    line-height: 1;
+    text-align: left;
+    z-index: 1;
+}
+
+.weare {
+    font-family: 'Are You Serious', cursive;
+    color: white;
+    font-size: calc(14px + 4vw);
+}
+
+.the {
+    font-family: 'Are You Serious', cursive;
+    color: white;
+    font-size: calc(14px + 4vw);
+}
+
+.overthemoon {
+    /* margin-left: 5vw; */
+}
+
+.over {
+    color: #fcefb2;
+    font-family: 'Dancing Script', cursive;
+    font-size: calc(20px + 6vw);
+}
+
+.moontext {
+    color: #fcefb2;
+    font-family: 'Dancing Script', cursive;
+    font-size: calc(25px + 8vw);
+    margin-left: -6vw;
+}
+
+.joinus-container {
+    margin: 20vh 0 0 0;
+    z-index: 2;
+    position: absolute;
+    right: 20%;
+    text-align: right;
+}
+
+.join-us {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: calc(15px + 3vw);
+    text-align: center;
+}
+
+.robert-iv {
+    font-family: 'Secular One', sans-serif;
+    color: #fcefb2;
+    font-size: calc(18px + 3vw);
+
+}
+
+.iv {
+    font-family: 'Abril Fatface', cursive;
+}
+
+.the4th {
+    font-family:sans-serif;
+    font-size: calc(12px + 1.5vw);
+}
+
+
+/******* IMAGES *********/
+
+.stars-top {
+    width: 40%;
+    z-index: -1;
+    margin: 5vh 0vw 0 0vw;
+}
+
+.moon {
+    position: absolute;
+    width: 30%;
+    margin: 10vh 2vw 0 10vw;
+    left: 6vw;
+}
+
+.stars-right-top {
+    width: 45%;
+    position: absolute;
+    right: 0;
+    top: 18vh;
+}
+
+.cloud1 {
+    right: 0px;
+    position: absolute;
+    margin-top: 50vh;
+    opacity: 0.5;
+    width: 40%;
+    z-index: 0;
+}
+
+.cloud2 {
+    right: 5;
+    position: absolute;
+    margin-top: 70vh;
+    width: 25%;
+    z-index: 0;
+}
+
+.cloud3 {
+    left: 0;
+    position: absolute;
+    margin-top: 65vh;
+    opacity: 0.8;
+    width: 40%;
+    z-index: 0;
+}
+
+/****FOR MOBILE VIEW *****/
+@media only screen and (max-width: 413px) and (orientation: portrait) {
+    /* .registry-section {
+        height: 54vh;
+    } */
+    .info {
+        height: 80vh;
+        margin: -0.09vh;
+    }
+    .home {
+        height: 59vh;
+    }
+
+    .cloud1 {
+        margin-top: 25vh;
+    }
+    .cloud2 {
+        margin-top: 24vh;
+    }
+    .cloud3 {
+        margin-top: 36vh;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .home {
+        height: 180vh;
+    }
+    .info {
+        height: 160vh;
+        margin: -0.09vw;
+    }
+}
+
+@media only screen and (min-width:929px) and (orientation: landscape) {
+    .home {
+        height: 120vh;
+    }
+    .info {
+        height: 70vh;
+    }
+}
+
+.info {
+    background-color: #26007b;
+}
+
+@media only screen and (min-width:929px) and (orientation: portrait) {
+    
+}
+
+@media only screen and (max-width:929px) and (orientation: portrait) and (min-width: 400px){
+    .home {
+        height: 68vh;
+    }
+
+    .twinkle-title {
+        margin: 0vh 0 0 0;
+        /* right: 20%; */
+    }
+
+    .moontext {
+        margin-top: -2vh;
+    }
+    
+    .join-us {
+        margin-top: 4vh;
+    }
+    .joinus-container {
+        margin: 11vh 0 0 0;
+        right: 10%;
+    }
+
+    .cloud1 {
+        margin-top: 30vh;
+    }
+
+    .cloud2 {
+        margin-top: 40vh;
+    }
+
+    .cloud3 {
+        margin-top: 40vh;
+    }
+
+    .cloud4 {
+        margin-top: -40vw;
+    }
+    .info {
+        height: 70vh;
+    }
+    
+}
+
+
+/******** INFO RSVP PANEL **********/
+.panel2 {
+    height: 20vh;      
+    background-color: #0a0068;
+    background-size: cover;
+    position: relative;
+    margin: -0.08vw;
+    margin-top: -1vh;
+}
+
+.panel2-overlap {
+    position: absolute;
+	width: 100%;
+	height: 21vh;
+    top: 0;
+    left: 0;
+    background-color: #26007b;
+    background-size: cover;   
+    clip-path: polygon(0% 0%,100% 80%,100% 100%, 0% 100%);
+}
+
+.panel2_wrapper {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+}
+
+
+/***** IMAGES -  INFO RSVP PANEL ****/
+.cloud4 {
+    left: 2vw;
+    position: absolute;
+    opacity: 0.8;
+    width: 25%;
+    z-index: 0;
+    margin-top: -10vw;
+}
+
+.cloud5 {
+    left: 10vw;
+    position: absolute;
+    opacity: 1;
+    width: 40%;
+    z-index: 0;
+    margin-top: 0vw;
+}
+
+.rocket {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    text-align: center;   
+}
+
+.invite { 
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.houston {
+    color: white;
+    font-size: calc(15px + 1.5vw);
+    font-family: 'Secular One', sans-serif;
+}
+
+.aboy {
+    /* position: absolute; */
+    text-align: center;
+    right: 55%;
+    margin-top: -5vh;
+    /* margin: -6vh 0vw 0vh 17vw; */
+    font-family: 'Cookie', cursive;
+    font-size: calc(20px + 8vw);
+    color: #fde5ba;
+    text-shadow: 3px 3px #8b8383;
+}
+
+.invite-paragraph {
+    color: white;
+    font-size: calc(12px + 1vw);
+    text-align: left;
+}
+
+.rsvp-button {
+    margin-top: 5vh;
+    font-family: 'Secular One', sans-serif;
+    background-color: #fcefb2;
+    border: none;
+    color: black;
+    padding: 10px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(12px + 0.8vw);
+    box-shadow: 3px 3px rgb(109, 109, 109);    
+}
+
+.rsvp-button:hover {
+    background-color: #ffd200;
+    color: white;
+}
+
+.cloud6 {
+    right: 0;
+    position: absolute;
+    opacity: 0.5;
+    width: 25%;
+    z-index: 0;
+    margin-top: -30vw;
+}
+
+.cloud7 {
+    left: 20vw;
+    position: absolute;
+    opacity: 0.8;
+    width: 35%;
+    z-index: 1;
+    margin-top: -10vw;
+}
+
+
+/****FOR MOBILE VIEW - INFO RSVP PANEL*****/
+/* @media only screen and (min-width:929px) and (max-width: 1500px) {
+    .rsvp-button {
+        margin-left: 10%;
+    }
+} */
+
+
+@media screen and (max-width: 415px) and (min-width: 280px) and (orientation: portrait) {
+    .registry-section {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 280px) and (orientation: portrait) {
+    .registry-section {
+        height: 57vh;
+    }
+}
+
+
+/* @media screen and (min-width: 415px) and (orientation: landscape) {
+    .registry-section {
+        height: 91vh;
+    }
+} */
+
+@media only screen and (max-width:929px) and (min-width:400px) {
+    .invite {
+        margin-top: 10vh;
+    }
+    
+}
+
+@media only screen and (max-width:400px) {
+    .invite {
+        margin-top: 3vh;
+    }
+}
+
+@media only screen and (max-width:929px) {
+    .rocket {
+        max-width: 200px;
+        left: 23%;
+    }
+    .cloud4 {
+        margin-top: -20vw;
+    }
+    .cloud5 {
+        margin-top: -10vw;
+    }
+    .cloud6 {
+        margin-top: -30vw;
+    }
+    .cloud7 {
+        left: 0vw;
+    }
+}
+
+/******* RSVP **********/
+.panel3_wrapper {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+}
+  
+.panel3 {
+    height: 21vh;      
+    background-color: #26007b;
+    background-size: cover;
+    position: relative;
+    margin: -0.05vw;
+}
+
+.panel3-overlap {
+    position: absolute;
+	width: 100%;
+	height: 21vh;
+    top: 0;
+    left: 0;
+    background-color: #42008d;
+    background-size: cover;   
+    clip-path: polygon(0% 90%,100% 20%,100% 100%,0% 100%);
+}
+
+.rsvp-registry-form {
+    background-color: #42008d;
+    width: 100%;
+}
+
+.registry-section {
+    /* padding-top: 10vh; */
+    background-color: #42008d;
+    /* height: 80vh; */
+}
+
+.registry-title {
+    text-align: center;
+    font-family: 'Cookie', cursive;
+    color:#fcefb2;
+    font-size: calc(40px + 8vw);
+    text-shadow: 3px 3px #8b8383;
+    z-index: 3;
+}
+
+.thankyou {
+    color: white;
+    font-family: 'zerocal';
+    font-size: calc(15px + 3vw);
+    position: absolute;
+    margin-left: 50%;
+    margin-top: -4vh;
+}
+
+.registry-icon-amazon {
+    margin-top: 20%;
+    width: 100%;
+}
+
+.registry-icon-paypal {
+    margin: 0;
+    width: 100%;
+}
+
+/* .registry-grid-container {
+    margin-top: 10vh;
+  } */
+  
+.registry-grid-item {
+    z-index: 4;
+    background-color: white;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto;
+    min-width: calc(100px + 10vw);
+    min-height: calc(100px + 10vw);
+    margin-top: 2vw;
+    /* text-align: center;
+    margin: 0 auto; */
+}
+
+.registry-space {
+    height: 2vw;
+}
+
+.comet {
+    right: 0;
+    opacity: 0.9;
+    position: absolute;
+    width: 30%;
+    z-index: 0;
+    margin-top: -90vh;
+    min-width: 150px;
+}
+
+.saturn-registry {
+    position: absolute;
+    width: 35%;
+    z-index: 0;
+    opacity: 0.8;
+    margin-top: 8vh;
+}
+
+.cloud8 {
+    right: 0;
+    position: absolute;
+    opacity: 0.5;
+    width: 25%;
+    z-index: 1;
+    margin-top: -30vh;
+}
+
+
+/****FOR MOBILE VIEW - RSVP*****/
+@media only screen and (max-width:929px) {
+    .thankyou {
+        margin-left: 50%;
+        margin-top: -4vh;
+        z-index: 3;
+    }
+}
+
+
+
+.rsvp-title {
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+    color:#fcefb2;
+    font-size: calc(35px + 8vw);
+    text-shadow: 3px 3px #8b8383;
+    z-index: 3;
+    line-height: 0.9;
+}
+
+
+/** RSVP FORM **/
+.rsvp-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    color: #6aa482;
+}
+  
+.rsvp-label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+  
+.rsvp-submit {
+    background-color: #0a0068;
+    color: white;
+    padding: 5px 50px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Secular One', sans-serif;
+    /* float: right; */
+}
+
+.rsvp-submit-container {
+    text-align: center;
+}
+.rsvp-submit:hover {
+    background-color: #7a00b2;
+}
+
+.rsvp-label {
+    padding: 0;
+    font-size: 30px;
+}
+
+.rsvp-col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    font-size: calc(10px + 1vw);
+    font-family: 'Dancing Script', cursive;
+}
+  
+.rsvp-col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+  
+  /* Clear floats after the columns */
+.rsvp-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .rsvp-col-25, .rsvp-col-75, .rsvp-submit {
+      width: 100%;
+      margin-top: 0;
+    }
+}
+
+/******* RSVP FORM *********/
+.panel4 {
+    height: 20vh;      
+    background-color: #42008d;
+    background-size: cover;
+    position: relative;
+    margin: -0.08vw;
+}
+
+.panel4-overlap {
+    position: absolute;
+	width: 100%;
+	height: 21vh;
+    top: 0;
+    left: 0;
+    background-color: #5e00a0;
+    background-size: cover;   
+    clip-path: polygon(0% 0%,100% 80%,100% 100%, 0% 100%);
+}
+
+.panel4_wrapper {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+}
+
+.rsvp-container {
+    background-color: #5e00a0;
+}
+
+
+
+.rsvp-space {
+    height: 5vh;
+}
+
+.rsvp-form-container {
+    background-color: white;
+    /* margin: 5vh 10vw 10vh 10vw; */
+    border-radius: 20px;
+    margin-bottom: 5vh;
+    padding: 3vw;
+    width: 95%;
+}
+
+.rsvp-bottom {
+    height: 2vh;
+}
+
+
+.cloud10 {
+    opacity: 0.9;
+    left: 0;
+    position: absolute;
+    width: 30%;
+    z-index: 0;
+    margin-top: -22vh;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.cloud11 {
+    right: 0;
+    position: absolute;
+    margin-top: -40vh;
+    width: 25%;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.cloud12 {
+    opacity: 0.3;
+    right: 0;
+    position: absolute;
+    width: 40%;
+    z-index: 0;
+    margin-top: -50vh;
+}
+
+.comet {
+    opacity: 0.9;
+    position: absolute;
+    right: 0;
+    width: 35%;
+    z-index: 0;
+    margin: -40vh 0vw 0 0vw;
+}
+
+.cloud9 {
+    opacity: 0.9;
+    left: 0;
+    position: absolute;
+    width: 35%;
+    z-index: 0;
+    margin-top: -22vh;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.saturn-registry {
+    opacity: 0.9;
+    right: 0;
+    position: absolute;
+    width: 30%;
+    z-index: 0;
+    margin-top: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
